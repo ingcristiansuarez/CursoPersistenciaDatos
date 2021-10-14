@@ -2,7 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
+public class DBConnection {
 
     public Connection get_conection() throws SQLException {
         Connection conection = null;
@@ -12,9 +12,6 @@ public class Conexion {
                     "root",
                     ""
             );
-            if (conection != null){
-                System.out.println("Conexión exitosa");
-            }
 
         } catch(SQLException e){
             System.out.println(e);
