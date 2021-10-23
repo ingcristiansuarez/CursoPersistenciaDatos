@@ -1,3 +1,5 @@
+import com.sun.xml.internal.stream.Entity;
+
 import java.util.Scanner;
 
 public class MessagesService {
@@ -19,11 +21,14 @@ public class MessagesService {
     }
 
     public static void listMessage(){
-
+        DAOMessages.readMessagesDB();
     }
 
     public static void deleteMessage(){
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("indicate the message that wish delete");
+        int idMessage = sc.nextInt();
+        DAOMessages.deleteMessageDB(idMessage);
     }
 
     public static void upgradeMessage(){
